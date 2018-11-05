@@ -26,6 +26,7 @@ import { EffectsModule } from '@ngrx/effects';
   ],
   imports: [
     BrowserModule,
+    StoreModule.forRoot(reducers, {}),
     StoreModule.forRoot({blockchain: addCoinReducer}),
     EffectsModule.forRoot([AuthEffects]),
     ReactiveFormsModule,
